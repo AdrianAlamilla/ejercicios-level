@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}Registros{% endblock titulo %}</title>
+</head>
+<body>
+    {% block cuerpo %}
+    <h1>Lista de registros:</h1>
+<table border="2">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Kilometros</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for persona in personas %}
+    <tr>
+    <td>{{ persona.nombre }}</td>
+    <td>{{ persona.correo }}</td>
+    <td>{{ persona.kilometros }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    {% endblock cuerpo %}
+</body>
+</html
